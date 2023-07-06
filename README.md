@@ -16,17 +16,18 @@
 <!--ts-->
 
 - 🛠️ [Requirements](#️-requirements)
-- 📂 [Data Source](#-data-source)
-- 🚀 [Solution](#-solutions)
-- 🧱 [Building Data Warehouse](#-data-warehouse)
-- 🧙‍♂️ [Result](#️-result)
+- 🧙‍♂️ [Data Source](#-data-source)
+- 🚀 [Solution](#-solution)
+- 🧱 [Building Data Warehouse](#-building-data-warehouse)
+- 📊 [Result](#️-result)
+- 📂 [Files](#-files)
 <!--te-->
 
  <br />
 
 # 🛠️ Requirements
 
-# 📂 Data Source
+# 🧙‍♂️ Data Source
 
 AdventureWorks Database is a sample online transaction processing (OLTP) database provided by Microsoft. The AdventureWorks Database supports a multinational manufacturing company called Adventure Works Cycles. This project will utilize the AdventureWorks Database version 2019 and concentrates on module Sales only.
 
@@ -49,14 +50,15 @@ AdventureWorks Database is a sample online transaction processing (OLTP) databas
 - Step 1: Load data from On-Premise and On-Cloud into SQL Server Integration Services (SSIS) tool via Ingest Phase
 - Step 2: ETL data into the Staging Area with the schema name "Integration", and set up job scheduler to automatically run the package once every hour
 - Step 3: ETL data into Data Warehouse with the schema name "DW", and run the package automatically once a day. At the same time, Truncate all data from the Staging Area every month.
-- Step 4: divide 2 branches
+- Step 4: divide 2 branches \n
 
-* Using Power Automate to automatically refresh data and perform analysis report generation once a day.
-* Using SQL Server Analysis Services (SSAS) tool to create cube for analysis
+Using Power Automate to automatically refresh data and perform analysis report generation once a day. \n
+
+Using SQL Server Analysis Services (SSAS) tool to create cube for analysis
 
 # 🧱 Building Data Warehouse
 
-Bus Matrix, Master Data, Transaction Data, ETL Mapping, etc. are deployed to support the data warehouse construction process.
+`Bus Matrix`, `Master Data`, `Transaction Data`, `ETL Mapping`, etc. are deployed to support the data warehouse construction process.
 
 ## Data Warehouse model
 
@@ -124,13 +126,81 @@ Based on the pipeline shown above, it is divided into 3 phases:
 
 ### **Job Scheduler**
 
+<p align="center">
 <img src="https://github.com/trannhatnguyen2/BI_BoKho/blob/main/img/JobScheduler.png" width=80% height=80%>
 
 <p align="center">
     Schedule jobs configure the step truncate
 </p>
 
-## 📂 All file we were submitted
+# 📊 Result
+
+## Data Analytics with SSAS Technology
+
+<p align="center">
+<img src="https://github.com/trannhatnguyen2/BI_BoKho/blob/main/img/SSAS.png" width=80% height=80%>
+
+<p align="center">
+    Data Warehouse Schema (SSAS)
+</p>
+
+## Incremental Refresh Using Power Automate
+
+<p align="center">
+<img src="https://github.com/trannhatnguyen2/BI_BoKho/blob/main/img/Automate.png" width=80% height=80%>
+
+<p align="center">
+    The Flow of automated refresh a dataset
+</p>
+
+## Data analysis with Power BI
+
+### Sales Performance Dashboard
+
+<p align="center">
+<img src="https://github.com/trannhatnguyen2/BI_BoKho/blob/main/img/Dashboard_SalesSummary.png" width=80% height=80%>
+
+<p align="center">
+    Sales Performance Dashboard
+</p>
+
+### Sales Performance
+
+<p align="center">
+<img src="https://github.com/trannhatnguyen2/BI_BoKho/blob/main/img/Dashboard_SalesSummary.png" width=80% height=80%>
+
+<p align="center">
+    Sales Performance Dashboard
+</p>
+
+### Product Analysis
+
+<p align="center">
+<img src="https://github.com/trannhatnguyen2/BI_BoKho/blob/main/img/Dashboard_ProductSales.png" width=80% height=80%>
+
+<p align="center">
+    Product Analysis Dashboard
+</p>
+
+### Delivery Performance
+
+<p align="center">
+<img src="https://github.com/trannhatnguyen2/BI_BoKho/blob/main/img/Dashboard_DeliveryPerformance.png" width=80% height=80%>
+
+<p align="center">
+    Delivery Performance Dashboard
+</p>
+
+### Customer Segmentation
+
+<p align="center">
+<img src="https://github.com/trannhatnguyen2/BI_BoKho/blob/main/img/Dashboard_CustomerSegmentation.png" width=80% height=80%>
+
+<p align="center">
+    Customer Segmentation Dashboard
+</p>
+
+# 📂 Files
 
 ### > **1. Report (both Word and pdf file) -** [Link](https://github.com/trannhatnguyen2/K20406C_BoKho/blob/main/K20406C_BoKho.pdf)
 
