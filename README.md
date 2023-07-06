@@ -41,7 +41,7 @@ AdventureWorks Database is a sample online transaction processing (OLTP) databas
 # 🚀 Solution
 
 <p align="center">
-<img src="https://github.com/trannhatnguyen2/BI_BoKho/blob/main/img/BI_Process.png" width=80% height=80%>
+<img src="https://github.com/trannhatnguyen2/BI_BoKho/blob/main/img/BI_Process.png" width=100% height=100%>
 
 <p align="center">
     BI Solution
@@ -65,7 +65,7 @@ Using SQL Server Analysis Services (SSAS) tool to create cube for analysis
 The diagram below illustrates the fundamental conceptual diagram of the proposed data warehouse in Star format.
 
 <p align="center">
-<img src="https://github.com/trannhatnguyen2/BI_BoKho/blob/main/img/DataWarehouse_StarSchema.png" width=80% height=80%>
+<img src="https://github.com/trannhatnguyen2/BI_BoKho/blob/main/img/DataWarehouse_StarSchema.png" width=70% height=70%>
 
 <p align="center">
     Data Warehouse Star Schema
@@ -76,7 +76,7 @@ The diagram below illustrates the fundamental conceptual diagram of the proposed
 ### **ETL Master Pipeline**
 
 <p align="center">
-<img src="https://github.com/trannhatnguyen2/BI_BoKho/blob/main/img/ETL_MasterPipeline.png" width=80% height=80%>
+<img src="https://github.com/trannhatnguyen2/BI_BoKho/blob/main/img/ETL_MasterPipeline.png" width=70% height=70%>
 
 <p align="center">
     ETL Master Pipeline
@@ -86,7 +86,7 @@ Based on the pipeline shown above, it is divided into 3 phases:
 
 - Phase 1: Load data from Source --> Staging Area
 - Phase 2: Load data from Staging --> Dimension Tables
-- Phases 3: Load data from Staging -- Fact Table
+- Phase 3: Load data from Staging -- Fact Table
 
 ### **Phase 1: Staging Area's ETL Process**
 
@@ -109,7 +109,7 @@ Based on the pipeline shown above, it is divided into 3 phases:
 ### **Phase 3: Fact Table's ETL Process**
 
 <p align="center">
-<img src="https://github.com/trannhatnguyen2/BI_BoKho/blob/main/img/Staging_To_FactTable.png" width=80% height=80%>
+<img src="https://github.com/trannhatnguyen2/BI_BoKho/blob/main/img/Staging_To_FactTable.png" width=60% height=60%>
 
 <p align="center">
     Load data from Staging -- Fact Table
@@ -118,7 +118,7 @@ Based on the pipeline shown above, it is divided into 3 phases:
 ### **Truncate Tables in Staging Area**
 
 <p align="center">
-<img src="https://github.com/trannhatnguyen2/BI_BoKho/blob/main/img/Truncate_Staging.png" width=80% height=80%>
+<img src="https://github.com/trannhatnguyen2/BI_BoKho/blob/main/img/Truncate_Staging.png" width=60% height=60%>
 
 <p align="center">
     Truncate Tables in Staging Area
@@ -127,7 +127,7 @@ Based on the pipeline shown above, it is divided into 3 phases:
 ### **Job Scheduler**
 
 <p align="center">
-<img src="https://github.com/trannhatnguyen2/BI_BoKho/blob/main/img/JobScheduler.png" width=80% height=80%>
+<img src="https://github.com/trannhatnguyen2/BI_BoKho/blob/main/img/JobScheduler.png" width=60% height=60%>
 
 <p align="center">
     Schedule jobs configure the step truncate
@@ -138,7 +138,7 @@ Based on the pipeline shown above, it is divided into 3 phases:
 ## Data Analytics with SSAS Technology
 
 <p align="center">
-<img src="https://github.com/trannhatnguyen2/BI_BoKho/blob/main/img/SSAS.png" width=80% height=80%>
+<img src="https://github.com/trannhatnguyen2/BI_BoKho/blob/main/img/SSAS.png" width=70% height=70%>
 
 <p align="center">
     Data Warehouse Schema (SSAS)
@@ -147,22 +147,13 @@ Based on the pipeline shown above, it is divided into 3 phases:
 ## Incremental Refresh Using Power Automate
 
 <p align="center">
-<img src="https://github.com/trannhatnguyen2/BI_BoKho/blob/main/img/Automate.png" width=80% height=80%>
+<img src="https://github.com/trannhatnguyen2/BI_BoKho/blob/main/img/Automate.png" width=50% height=50%>
 
 <p align="center">
     The Flow of automated refresh a dataset
 </p>
 
 ## Data analysis with Power BI
-
-### Sales Performance Dashboard
-
-<p align="center">
-<img src="https://github.com/trannhatnguyen2/BI_BoKho/blob/main/img/Dashboard_SalesSummary.png" width=80% height=80%>
-
-<p align="center">
-    Sales Performance Dashboard
-</p>
 
 ### Sales Performance
 
