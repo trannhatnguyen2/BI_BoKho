@@ -31,7 +31,7 @@
 AdventureWorks Database is a sample online transaction processing (OLTP) database provided by Microsoft. The AdventureWorks Database supports a multinational manufacturing company called Adventure Works Cycles. This project will utilize the AdventureWorks Database version 2019 and concentrates on module Sales only.
 
 <p align="center">
-<img src="./img/datasource.png" width=50% height=50%>
+<img src="./img/datasource.png" width=80% height=80%>
 
 <p align="center">
     Data Source: Sales Module
@@ -46,13 +46,13 @@ AdventureWorks Database is a sample online transaction processing (OLTP) databas
     BI Solution
 </p>
 
-Step 1: Load data from On-Premise and On-Cloud into SQL Server Integration Services (SSIS) tool via Ingest Phase
-Step 2: ETL data into the Staging Area with the schema name "Integration", and set up job scheduler to automatically run the package once every hour
-Step 3: ETL data into Data Warehouse with the schema name "DW", and run the package automatically once a day. At the same time, Truncate all data from the Staging Area every month.
-Step 4:
+- Step 1: Load data from On-Premise and On-Cloud into SQL Server Integration Services (SSIS) tool via Ingest Phase
+- Step 2: ETL data into the Staging Area with the schema name "Integration", and set up job scheduler to automatically run the package once every hour
+- Step 3: ETL data into Data Warehouse with the schema name "DW", and run the package automatically once a day. At the same time, Truncate all data from the Staging Area every month.
+- Step 4: divide 2 branches
 
-- Using Power Automate to automatically refresh data and perform analysis report generation once a day.
-- Using SQL Server Analysis Services (SSAS) tool to create cube for analysis
+* Using Power Automate to automatically refresh data and perform analysis report generation once a day.
+* Using SQL Server Analysis Services (SSAS) tool to create cube for analysis
 
 # 🧱 Building Data Warehouse
 
