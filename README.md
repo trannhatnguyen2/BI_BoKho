@@ -52,9 +52,9 @@ AdventureWorks Database is a sample online transaction processing (OLTP) databas
 - Step 3: ETL data into Data Warehouse with the schema name "DW", and run the package automatically once a day. At the same time, Truncate all data from the Staging Area every month.
 - Step 4: divide 2 branches \n
 
-Using Power Automate to automatically refresh data and perform analysis report generation once a day. \n
+> Using Power Automate to automatically refresh data and perform analysis report generation once a day. \n
 
-Using SQL Server Analysis Services (SSAS) tool to create cube for analysis
+> Using SQL Server Analysis Services (SSAS) tool to create cube for analysis
 
 # 🧱 Building Data Warehouse
 
