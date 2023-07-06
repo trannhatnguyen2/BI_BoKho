@@ -1,0 +1,78 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/7/2023 5:34:10 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-80UMU1UQ"
+  DTS:CreatorName="LAPTOP-80UMU1UQ\ADMIN"
+  DTS:DTSID="{B74CEED5-FE26-40AD-934B-9089B82FAA54}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5035.3"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="1"
+  DTS:VersionGUID="{23165562-2C14-447A-B610-D028079B27AA}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAPTOP-80UMU1UQ\NHATNGUYEN.BI_DW_BoKho_K20406C.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{DD0E3661-0263-4394-BDE0-0A925D547945}"
+      DTS:ObjectName="LAPTOP-80UMU1UQ\NHATNGUYEN.BI_DW_BoKho_K20406C.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=LAPTOP-80UMU1UQ\NHATNGUYEN;User ID=sa;Initial Catalog=BI_DW_BoKho_K20406C;Provider=SQLNCLI11.1;Persist Security Info=True;Application Name=SSIS-Package1-{DD0E3661-0263-4394-BDE0-0A925D547945}LAPTOP-80UMU1UQ\NHATNGUYEN.BI_DW_BoKho_K20406C.sa;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA7dKrbfITx0qrIcMVQQlLuQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB3aJ5nJdnEP1nR8rr4tBGjvggP8HsHLLtmTN09TOcO3wAAAAAOgAAAAAIAACAAAAA4cSWOA6xeVMGdVFy9knOwnEIH3nN9b6PkzlTiYtqwlyAAAAAHfjqNqqLUpM95UGE4s1D60a3n09twMrBqZGTN+P/1vkAAAAChH0v4gANDMKUXM/CmqpHgETHjvP5TdTOjHNFZXnE/kLy6pHThoAF99BsSSUrXyDlODYTcBLuLOh+wJwYs12vb</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Create DimDate"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{D2289367-6795-4275-A6FF-F2DBD8C35D8F}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Create DimDate"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{DD0E3661-0263-4394-BDE0-0A925D547945}"
+          SQLTask:SqlStatementSource="CREATE TABLE&#x9;[DW].[DimDate]&#xA;&#x9;(&#x9;[DateKey] INT primary key, &#xA;&#x9;&#x9;[Date] DATETIME,&#xA;&#x9;&#x9;[FullDate] CHAR(10),-- Date in MM-dd-yyyy format&#xA;&#x9;&#x9;[DayOfMonth] VARCHAR(2), -- Field will hold day number of Month&#xA;&#x9;&#x9;[DayName] VARCHAR(9), -- Contains name of the day, Sunday, Monday &#xA;&#x9;&#x9;[DayOfWeek] CHAR(1),-- First Day Sunday=1 and Saturday=7&#xA;&#x9;&#x9;--[DayOfWeekInMonth] VARCHAR(2), --1st Monday or 2nd Monday in Month&#xA;&#x9;&#x9;--[DayOfWeekInYear] VARCHAR(2),&#xA;&#x9;&#x9;--[DayOfQuarter] VARCHAR(3),&#xA;&#x9;&#x9;--[DayOfYear] VARCHAR(3),&#xA;&#x9;&#x9;--[WeekOfMonth] VARCHAR(1),-- Week Number of Month &#xA;&#x9;&#x9;--[WeekOfQuarter] VARCHAR(2), --Week Number of the Quarter&#xA;&#x9;&#x9;--[WeekOfYear] VARCHAR(2),--Week Number of the Year&#xA;&#x9;&#x9;[Month] VARCHAR(2), --Number of the Month 1 to 12&#xA;&#x9;&#x9;[MonthName] VARCHAR(9),--January, February etc&#xA;&#x9;&#x9;--[MonthOfQuarter] VARCHAR(2),-- Month Number belongs to Quarter&#xA;&#x9;&#x9;[Quarter] CHAR(1),&#xA;&#x9;&#x9;--[QuarterName] VARCHAR(9),--First,Second..&#xA;&#x9;&#x9;[Year] CHAR(4),-- Year value of Date stored in Row&#xA;&#x9;&#x9;--[YearName] CHAR(7), --CY 2012,CY 2013&#xA;&#x9;&#x9;[MonthYear] CHAR(10), --Jan-2013,Feb-2013&#xA;&#x9;&#x9;[MMYYYY] CHAR(6),&#xA;&#x9;&#x9;[FirstDayOfMonth] DATE,&#xA;&#x9;&#x9;[LastDayOfMonth] DATE,&#xA;&#x9;&#x9;[FirstDayOfQuarter] DATE,&#xA;&#x9;&#x9;[LastDayOfQuarter] DATE,&#xA;&#x9;&#x9;[FirstDayOfYear] DATE,&#xA;&#x9;&#x9;[LastDayOfYear] DATE,&#xA;&#x9;&#x9;[IsWeekend] BIT NOT NULL,&#xA;&#x9;&#x9;[IsHoliday] BIT NOT NULL,&#xA;&#x9;&#x9;[HolidayName] VARCHAR(50)&#xA;&#x9;)&#xA;GO&#xA;&#xA;/********************************************************************************************/&#xA;--Specify Start Date and End date here&#xA;--Value of Start Date Must be Less than Your End Date &#xA;&#xA;DECLARE @StartDate DATETIME = '01/01/2010' --Starting value of Date Range&#xA;DECLARE @EndDate DATETIME = '01/01/2026' --End Value of Date Range&#xA;&#xA;--Temporary Variables To Hold the Values During Processing of Each Date of Year&#xA;DECLARE&#xA;&#x9;@DayOfWeekInMonth INT,&#xA;&#x9;@DayOfWeekInYear INT,&#xA;&#x9;@DayOfQuarter INT,&#xA;&#x9;@WeekOfMonth INT,&#xA;&#x9;@CurrentYear INT,&#xA;&#x9;@CurrentMonth INT,&#xA;&#x9;@CurrentQuarter INT&#xA;&#xA;/*Table Data type to store the day of week count for the month and year*/&#xA;DECLARE @DayOfWeek TABLE (DOW INT, MonthCount INT, QuarterCount INT, YearCount INT)&#xA;&#xA;INSERT INTO @DayOfWeek VALUES (1, 0, 0, 0)&#xA;INSERT INTO @DayOfWeek VALUES (2, 0, 0, 0)&#xA;INSERT INTO @DayOfWeek VALUES (3, 0, 0, 0)&#xA;INSERT INTO @DayOfWeek VALUES (4, 0, 0, 0)&#xA;INSERT INTO @DayOfWeek VALUES (5, 0, 0, 0)&#xA;INSERT INTO @DayOfWeek VALUES (6, 0, 0, 0)&#xA;INSERT INTO @DayOfWeek VALUES (7, 0, 0, 0)&#xA;&#xA;--Extract and assign various parts of Values from Current Date to Variable&#xA;&#xA;DECLARE @CurrentDate AS DATETIME = @StartDate&#xA;SET @CurrentMonth = DATEPART(MM, @CurrentDate)&#xA;SET @CurrentYear = DATEPART(YY, @CurrentDate)&#xA;SET @CurrentQuarter = DATEPART(QQ, @CurrentDate)&#xA;&#xA;/********************************************************************************************/&#xA;--Proceed only if Start Date(Current date ) is less than End date you specified above&#xA;&#xA;WHILE @CurrentDate &lt; @EndDate&#xA;BEGIN&#xA; &#xA;/*Begin day of week logic*/&#xA;&#xA;         /*Check for Change in Month of the Current date if Month changed then &#xA;          Change variable value*/&#xA;&#x9;IF @CurrentMonth != DATEPART(MM, @CurrentDate) &#xA;&#x9;BEGIN&#xA;&#x9;&#x9;UPDATE @DayOfWeek&#xA;&#x9;&#x9;SET MonthCount = 0&#xA;&#x9;&#x9;SET @CurrentMonth = DATEPART(MM, @CurrentDate)&#xA;&#x9;END&#xA;&#xA;        /* Check for Change in Quarter of the Current date if Quarter changed then change &#xA;         Variable value*/&#xA;&#xA;&#x9;IF @CurrentQuarter != DATEPART(QQ, @CurrentDate)&#xA;&#x9;BEGIN&#xA;&#x9;&#x9;UPDATE @DayOfWeek&#xA;&#x9;&#x9;SET QuarterCount = 0&#xA;&#x9;&#x9;SET @CurrentQuarter = DATEPART(QQ, @CurrentDate)&#xA;&#x9;END&#xA;       &#xA;        /* Check for Change in Year of the Current date if Year changed then change &#xA;         Variable value*/&#xA;&#x9;&#xA;&#xA;&#x9;IF @CurrentYear != DATEPART(YY, @CurrentDate)&#xA;&#x9;BEGIN&#xA;&#x9;&#x9;UPDATE @DayOfWeek&#xA;&#x9;&#x9;SET YearCount = 0&#xA;&#x9;&#x9;SET @CurrentYear = DATEPART(YY, @CurrentDate)&#xA;&#x9;END&#xA;&#x9;&#xA;        -- Set values in table data type created above from variables &#xA;&#xA;&#x9;UPDATE @DayOfWeek&#xA;&#x9;SET &#xA;&#x9;&#x9;MonthCount = MonthCount + 1,&#xA;&#x9;&#x9;QuarterCount = QuarterCount + 1,&#xA;&#x9;&#x9;YearCount = YearCount + 1&#xA;&#x9;WHERE DOW = DATEPART(DW, @CurrentDate)&#xA;&#xA;&#x9;SELECT&#xA;&#x9;&#x9;@DayOfWeekInMonth = MonthCount,&#xA;&#x9;&#x9;@DayOfQuarter = QuarterCount,&#xA;&#x9;&#x9;@DayOfWeekInYear = YearCount&#xA;&#x9;FROM @DayOfWeek&#xA;&#x9;WHERE DOW = DATEPART(DW, @CurrentDate)&#xA;&#x9;&#xA;/*End day of week logic*/&#xA;&#xA;&#xA;/* Populate Your Dimension Table with values*/&#xA;&#x9;&#xA;&#x9;INSERT INTO [DW].[DimDate]&#xA;&#x9;SELECT&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;CONVERT (char(8),@CurrentDate,112) as DateKey,&#xA;&#x9;&#x9;@CurrentDate AS Date,&#xA;&#x9;&#x9;CONVERT (char(10),@CurrentDate,101) as FullDate,&#xA;&#x9;&#x9;DATEPART(DD, @CurrentDate) AS DayOfMonth,&#xA;&#x9;&#x9;DATENAME(DW, @CurrentDate) AS DayName,&#xA;&#x9;&#x9;DATEPART(DW, @CurrentDate) AS DayOfWeek,&#xA;&#x9;&#x9;--@DayOfWeekInMonth AS DayOfWeekInMonth,&#xA;&#x9;&#x9;--@DayOfWeekInYear AS DayOfWeekInYear,&#xA;&#x9;&#x9;--@DayOfQuarter AS DayOfQuarter,&#xA;&#x9;&#x9;--DATEPART(DY, @CurrentDate) AS DayOfYear,&#xA;&#x9;&#x9;--DATEPART(WW, @CurrentDate) + 1 - DATEPART(WW, CONVERT(VARCHAR, &#xA;&#x9;&#x9;--DATEPART(MM, @CurrentDate)) + '/1/' + CONVERT(VARCHAR,&#xA;&#x9;&#x9;--DATEPART(YY, @CurrentDate))) AS WeekOfMonth,&#xA;&#x9;&#x9;--(DATEDIFF(DD, DATEADD(QQ, DATEDIFF(QQ, 0, @CurrentDate), 0), &#xA;&#x9;&#x9;--@CurrentDate) / 7) + 1 AS WeekOfQuarter,&#xA;&#x9;&#x9;--DATEPART(WW, @CurrentDate) AS WeekOfYear,&#xA;&#x9;&#x9;DATEPART(MM, @CurrentDate) AS Month,&#xA;&#x9;&#x9;DATENAME(MM, @CurrentDate) AS MonthName,&#xA;&#x9;&#x9;--CASE&#xA;&#x9;&#x9;--&#x9;WHEN DATEPART(MM, @CurrentDate) IN (1, 4, 7, 10) THEN 1&#xA;&#x9;&#x9;--&#x9;WHEN DATEPART(MM, @CurrentDate) IN (2, 5, 8, 11) THEN 2&#xA;&#x9;&#x9;--&#x9;WHEN DATEPART(MM, @CurrentDate) IN (3, 6, 9, 12) THEN 3&#xA;&#x9;&#x9;--&#x9;END AS MonthOfQuarter,&#xA;&#x9;&#x9;DATEPART(QQ, @CurrentDate) AS Quarter,&#xA;&#x9;&#x9;--CASE DATEPART(QQ, @CurrentDate)&#xA;&#x9;&#x9;--&#x9;WHEN 1 THEN 'First'&#xA;&#x9;&#x9;--&#x9;WHEN 2 THEN 'Second'&#xA;&#x9;&#x9;--&#x9;WHEN 3 THEN 'Third'&#xA;&#x9;&#x9;--&#x9;WHEN 4 THEN 'Fourth'&#xA;&#x9;&#x9;--&#x9;END AS QuarterName,&#xA;&#x9;&#x9;DATEPART(YEAR, @CurrentDate) AS Year,&#xA;&#x9;&#x9;--'CY ' + CONVERT(VARCHAR, DATEPART(YEAR, @CurrentDate)) AS YearName,&#xA;&#x9;&#x9;LEFT(DATENAME(MM, @CurrentDate), 3) + '-' + CONVERT(VARCHAR, &#xA;&#x9;&#x9;DATEPART(YY, @CurrentDate)) AS MonthYear,&#xA;&#x9;&#x9;RIGHT('0' + CONVERT(VARCHAR, DATEPART(MM, @CurrentDate)),2) + &#xA;&#x9;&#x9;CONVERT(VARCHAR, DATEPART(YY, @CurrentDate)) AS MMYYYY,&#xA;&#x9;&#x9;CONVERT(DATETIME, CONVERT(DATE, DATEADD(DD, - (DATEPART(DD, &#xA;&#x9;&#x9;@CurrentDate) - 1), @CurrentDate))) AS FirstDayOfMonth,&#xA;&#x9;&#x9;CONVERT(DATETIME, CONVERT(DATE, DATEADD(DD, - (DATEPART(DD,&#xA;&#x9;&#x9;(DATEADD(MM, 1, @CurrentDate)))), DATEADD(MM, 1,&#xA;&#x9;&#x9;@CurrentDate)))) AS LastDayOfMonth,&#xA;&#x9;&#x9;DATEADD(QQ, DATEDIFF(QQ, 0, @CurrentDate), 0) AS FirstDayOfQuarter,&#xA;&#x9;&#x9;DATEADD(QQ, DATEDIFF(QQ, -1, @CurrentDate), -1) AS LastDayOfQuarter,&#xA;&#x9;&#x9;CONVERT(DATETIME, '01/01/' + CONVERT(VARCHAR, DATEPART(YY, &#xA;&#x9;&#x9;@CurrentDate))) AS FirstDayOfYear,&#xA;&#x9;&#x9;CONVERT(DATETIME, '12/31/' + CONVERT(VARCHAR, DATEPART(YY, &#xA;&#x9;&#x9;@CurrentDate))) AS LastDayOfYear,&#xA;&#x9;&#x9;[IsWeekend] = CASE &#xA;         WHEN DATENAME(dw, @CurrentDate) = 'Sunday'&#xA;            OR DATENAME(dw, @CurrentDate) = 'Saturday'&#xA;            THEN 1&#xA;         ELSE 0&#xA;         END,&#xA;         [IsHoliday] = 0,&#xA;&#x9;&#x9; [HolidayName] = NULL&#xA;&#xA;&#x9;SET @CurrentDate = DATEADD(DD, 1, @CurrentDate)&#xA;END&#xA;&#xA;/********************************************************************************************/&#xA;GO &#xA;SELECT * FROM [DW].[DimDate]&#xA;&#xA;UPDATE DW.DimDate &#xA;&#x9;SET [HolidayName] = 'Christmas''s Day', [IsHoliday] = 1&#xA;WHERE [Month] = 12 and [DayOfMonth] = 12&#xA;&#xA;UPDATE DW.DimDate &#xA;&#x9;SET [HolidayName] = 'Valentine''s Day', [IsHoliday] = 1&#xA;WHERE [Month] = 2 and [DayOfMonth] = 14&#xA;&#xA;UPDATE DW.DimDate &#xA;&#x9;SET [HolidayName] = 'New Year''s Day', [IsHoliday] = 1&#xA;WHERE [Month] = 1 and [DayOfMonth] = 1&#xA;&#xA;&#xA;"
+          SQLTask:TypeConversionMode="None" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\Create DimDate"
+          TopLeft="332.857148525666,175.117649514782" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

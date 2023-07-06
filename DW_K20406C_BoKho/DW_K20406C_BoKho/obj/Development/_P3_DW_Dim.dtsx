@@ -1,0 +1,523 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/28/2023 1:36:28 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-80UMU1UQ"
+  DTS:CreatorName="LAPTOP-80UMU1UQ\ADMIN"
+  DTS:DTSID="{1B8070C8-27A3-4D0A-BD97-E5EEBCDD97E6}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5035.3"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package2"
+  DTS:PackageType="5"
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{3349E569-A35C-4199-9D4F-B309983AD1E8}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Staging --&gt;Dim"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{05DBC13F-21F8-43A8-86D3-F7E192CE68C6}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Staging --&gt;Dim">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Staging --&gt;Dim\Package DimChannel"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{BF9B9A5B-A953-4549-BE6C-D92893CCFF0E}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Package DimChannel"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>DimChannel.dtsx</PackageName>
+              <PackagePassword
+                Sensitive="1"
+                Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA7dKrbfITx0qrIcMVQQlLuQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC/sU2OhcAira78pZy3RJjNcjq7RqieDUc3p5AZSi1jDwAAAAAOgAAAAAIAACAAAAD6JT709QC+toBvSA6vdS+hOkDO9yFDXgbE3RSB/cKMmyAAAADRI8wlX0sghgdsTZflOTF5OZM1EdHb4M1rfQ4IssSOfEAAAAAjB5ygWD7Cfo+dZ8JXXx1NGARF1wAHxkk9SsQT6MroeNN/769n6UJ3QclqiwMWFl82Eu1Fo9cCFqJXafAaKEG2</PackagePassword>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Staging --&gt;Dim\Package DimCustomer"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{8D52A901-F496-494B-B0D4-EE0A57241900}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Package DimCustomer"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>DimCustomer.dtsx</PackageName>
+              <PackagePassword
+                Sensitive="1"
+                Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA7dKrbfITx0qrIcMVQQlLuQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAmcfdv+ys9t5FFoiWsHGsnlBCofIY2HwzR310n8dzwWwAAAAAOgAAAAAIAACAAAAAegcoTNqHmOO5X4miiN+1yqVfzTk0QR3R4aVhJ5Q1RgCAAAADCPzH1mTiesEthIRVcWzgOaoZjuwSMUkSnFTCq6mMaW0AAAADpZdORcw5lpTyEq0ez6AXUA6yIHiwWBriwzrpFsRAhKQ+CBuUA3XNpLC5VCoTa7Gg/t+Ub86N+lyoW6J/dbqkE</PackagePassword>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Staging --&gt;Dim\Package DimEmployee"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{DBB87099-65BD-4EA6-96C5-96777FA92DCC}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Package DimEmployee"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>DimEmployee.dtsx</PackageName>
+              <PackagePassword
+                Sensitive="1"
+                Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA7dKrbfITx0qrIcMVQQlLuQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC0HbZpYTn0zs3LeonU8DxEPdJwn5rWiv+5fon2ij57kQAAAAAOgAAAAAIAACAAAABjMflTHrOA2r7sNLC3koISEAm8nFhJjeV6+QYIwEECliAAAACaxX301stQfJBv9E27WKPppZuTGfQIy5mA2E5YXi3mxEAAAADizOs5Tc310qLrqcRUgDsQDXkH2MmuPgxRnaCz19/2klGRApyOXVQcI/8obR2PWy9j62WK0gGwMiM8gJ5WK41U</PackagePassword>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Staging --&gt;Dim\Package DimGeography"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{3CF34176-4558-48A3-B4EF-26AAD25866B2}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Package DimGeography"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>DimGeography.dtsx</PackageName>
+              <PackagePassword
+                Sensitive="1"
+                Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA7dKrbfITx0qrIcMVQQlLuQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADIOHFOFkzc2jawT2sT57SdcjI8kUAnVA2Rn8MsXedJMQAAAAAOgAAAAAIAACAAAADTZKJSgFqybSvNjlQzNGFXl54y+JOSpQNiheP6ZwyPiyAAAACAQTNMk00VRvkbwq/IL98rh9NxKdU/IdUsEmlEEd/2pEAAAAB5Gpnd467BAMqjL4uCosDGdsNOC3CiE+UKiu2cQxu64i8lj9tCEAhnTlegRk+7nG6BApfzFN84FsMULMxWkZ7Q</PackagePassword>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Staging --&gt;Dim\Package DimProduct"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{653D72F7-5DCE-43F1-BA5B-B70B8228D118}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Package DimProduct"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>DimProduct.dtsx</PackageName>
+              <PackagePassword
+                Sensitive="1"
+                Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA7dKrbfITx0qrIcMVQQlLuQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACXXjFB0uieCJaHj+WtByZRLikgI6zOC2UEo/7ttiCdOwAAAAAOgAAAAAIAACAAAADyUrP6sc9xLEQNJasZUWCqEuDf2VsB3jhBZuZZAdX/ESAAAADEE7mjlzem9Sjrr6B7h9ugKoK0/N6MzS6CwoA+smv/pUAAAADBG5FGpR1OODR1/p/qRX49Yqb/r3TiH2l+1wXKAbcccL5Q0FGKTE2OAYEsONXcA+mpVIbm10OjkPMGSKdQflXL</PackagePassword>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Staging --&gt;Dim\Package DimShipMethod"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{D561ED8F-13A4-4B4F-9E2F-D1D6BD0F018B}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Package DimShipMethod"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>DimShipMethod.dtsx</PackageName>
+              <PackagePassword
+                Sensitive="1"
+                Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA7dKrbfITx0qrIcMVQQlLuQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAOXvy5cwBJ5r+ki1uM1ZWsSRkvNhCgFcnd5ueFn/wumwAAAAAOgAAAAAIAACAAAACxSIXGPogbMzNGxOu7GHThVtEa9UspfboK76QZ2TKEoiAAAADQ36yhPJZeADeP9cKs5YTX273EQgnmNI3V1u4mu9tg/UAAAAB2510nigYqEcSYy4ITwUSC4IBPhp8GaFiTRJ7UBqeRyOUY3k4oRkzmkW3VDEuS5e+a29AI91lrPOsm3TKa3Sd0</PackagePassword>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Staging --&gt;Dim\Package DimStore"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{302AD930-1E13-4E3E-B3BA-6C2D13F1EFBD}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Package DimStore"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>DimStore.dtsx</PackageName>
+              <PackagePassword
+                Sensitive="1"
+                Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA7dKrbfITx0qrIcMVQQlLuQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADubhrgVngzqwyQYsD0W5eJjDBmXMDnCWusPb6KpTPu9QAAAAAOgAAAAAIAACAAAAAfN0XX1X1x1TheW8Mz0rP14T/Q/Dl2oHdOUTiYLnZmbCAAAAAe4aJdzIo6dWFcoeW5JK/UtVPZmq3bAbxLYNhb0i6jz0AAAAARVJLPYExzRb0EBIubiV4bCK8Liq9iHb3opWJLmWnTgbKCsBtOPgYwMmxaGDIQkiZeuUeFyOEnCm+esQYxJDMN</PackagePassword>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Staging --&gt;Dim.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{46B5D8C1-0456-4986-8900-104EBBF5614E}"
+          DTS:From="Package\Staging --&gt;Dim\Package DimChannel"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Staging --&gt;Dim\Package DimCustomer" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Staging --&gt;Dim.PrecedenceConstraints[Constraint 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{B05A6C6E-F7CF-4548-9FFA-8C7EF65A3139}"
+          DTS:From="Package\Staging --&gt;Dim\Package DimCustomer"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 1"
+          DTS:To="Package\Staging --&gt;Dim\Package DimEmployee" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Staging --&gt;Dim.PrecedenceConstraints[Constraint 2]"
+          DTS:CreationName=""
+          DTS:DTSID="{161757D0-CCD1-4A9A-93F6-4FAD29F39944}"
+          DTS:From="Package\Staging --&gt;Dim\Package DimEmployee"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 2"
+          DTS:To="Package\Staging --&gt;Dim\Package DimProduct" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Staging --&gt;Dim.PrecedenceConstraints[Constraint 3]"
+          DTS:CreationName=""
+          DTS:DTSID="{16244E3D-1300-444A-A7BC-9C82D72EA4B9}"
+          DTS:From="Package\Staging --&gt;Dim\Package DimProduct"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 3"
+          DTS:To="Package\Staging --&gt;Dim\Package DimShipMethod" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Staging --&gt;Dim.PrecedenceConstraints[Constraint 4]"
+          DTS:CreationName=""
+          DTS:DTSID="{1DA0D4D2-395A-410C-9F12-7A2C54BC7B21}"
+          DTS:From="Package\Staging --&gt;Dim\Package DimShipMethod"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 4"
+          DTS:To="Package\Staging --&gt;Dim\Package DimGeography" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Staging --&gt;Dim.PrecedenceConstraints[Constraint 5]"
+          DTS:CreationName=""
+          DTS:DTSID="{BDCE6241-AB21-4DEA-A14E-5DF9809F8753}"
+          DTS:From="Package\Staging --&gt;Dim\Package DimGeography"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 5"
+          DTS:To="Package\Staging --&gt;Dim\Package DimStore" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssge="clr-namespace:Microsoft.SqlServer.Graph.Extended;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+        <NodeLayout
+          Size="176.8,41.6"
+          Id="Package\Staging --&gt;Dim\Package DimChannel"
+          TopLeft="34.1714338263688,23.6235314709093" />
+        <NodeLayout
+          Size="184,41.6"
+          Id="Package\Staging --&gt;Dim\Package DimCustomer"
+          TopLeft="317.901597388424,59.0993491638629" />
+        <NodeLayout
+          Size="184.8,41.6"
+          Id="Package\Staging --&gt;Dim\Package DimEmployee"
+          TopLeft="36.0761957635685,137.904578825292" />
+        <NodeLayout
+          Size="190.4,41.6"
+          Id="Package\Staging --&gt;Dim\Package DimGeography"
+          TopLeft="321.155565697806,283.335952235863" />
+        <NodeLayout
+          Size="175.2,41.6"
+          Id="Package\Staging --&gt;Dim\Package DimProduct"
+          TopLeft="319.806359325623,176.681049542224" />
+        <NodeLayout
+          Size="194.4,41.6"
+          Id="Package\Staging --&gt;Dim\Package DimShipMethod"
+          TopLeft="42.1079418980347,243.100657946621" />
+        <NodeLayout
+          Size="164,41.6"
+          Id="Package\Staging --&gt;Dim\Package DimStore"
+          TopLeft="39.7269894765349,354.081050818464" />
+        <EdgeLayout
+          Id="Package\Staging --&gt;Dim.PrecedenceConstraints[Constraint]"
+          TopLeft="210.971433826369,44.4235314709093">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="106.930163562055,35.4758176929536"
+              Start="0,0"
+              End="99.4301635620548,35.4758176929536">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="49.4650817810274,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="49.4650817810274,0"
+                    Point2="53.4650817810274,0"
+                    Point3="53.4650817810274,4" />
+                  <mssgle:LineSegment
+                    End="53.4650817810274,31.4758176929536" />
+                  <mssgle:CubicBezierSegment
+                    Point1="53.4650817810274,31.4758176929536"
+                    Point2="53.4650817810274,35.4758176929536"
+                    Point3="57.4650817810274,35.4758176929536" />
+                  <mssgle:LineSegment
+                    End="99.4301635620548,35.4758176929536" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Staging --&gt;Dim.PrecedenceConstraints[Constraint 1]"
+          TopLeft="409.901597388424,100.699349163863">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="-281.425401624855,37.2052296614289"
+              Start="0,0"
+              End="-281.425401624855,29.7052296614289">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.6026148307145" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.6026148307145"
+                    Point2="0,18.6026148307145"
+                    Point3="-4,18.6026148307145" />
+                  <mssgle:LineSegment
+                    End="-277.425401624855,18.6026148307145" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-277.425401624855,18.6026148307145"
+                    Point2="-281.425401624855,18.6026148307145"
+                    Point3="-281.425401624855,22.6026148307145" />
+                  <mssgle:LineSegment
+                    End="-281.425401624855,29.7052296614289" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Staging --&gt;Dim.PrecedenceConstraints[Constraint 2]"
+          TopLeft="220.876195763568,158.704578825292">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="98.9301635620548,38.7764707169319"
+              Start="0,0"
+              End="91.4301635620548,38.7764707169319">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="45.4650817810274,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="45.4650817810274,0"
+                    Point2="49.4650817810274,0"
+                    Point3="49.4650817810274,4" />
+                  <mssgle:LineSegment
+                    End="49.4650817810274,34.7764707169319" />
+                  <mssgle:CubicBezierSegment
+                    Point1="49.4650817810274,34.7764707169319"
+                    Point2="49.4650817810274,38.7764707169319"
+                    Point3="53.4650817810274,38.7764707169319" />
+                  <mssgle:LineSegment
+                    End="91.4301635620548,38.7764707169319" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Staging --&gt;Dim.PrecedenceConstraints[Constraint 3]"
+          TopLeft="407.406359325623,218.281049542224">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="-268.098417427589,24.8196084043973"
+              Start="0,0"
+              End="-268.098417427589,17.3196084043973">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,8.40980420219863" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,8.40980420219863"
+                    Point2="0,12.4098042021986"
+                    Point3="-4,12.4098042021986" />
+                  <mssgle:LineSegment
+                    End="-264.098417427589,12.4098042021986" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-264.098417427589,12.4098042021986"
+                    Point2="-268.098417427589,12.4098042021986"
+                    Point3="-268.098417427589,16.4098042021986" />
+                  <mssgle:LineSegment
+                    End="-268.098417427589,17.3196084043973" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Staging --&gt;Dim.PrecedenceConstraints[Constraint 4]"
+          TopLeft="236.507941898035,263.900657946621">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="84.6476237997714,40.2352942892423"
+              Start="0,0"
+              End="77.1476237997714,40.2352942892423">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="38.3238118998857,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="38.3238118998857,0"
+                    Point2="42.3238118998857,0"
+                    Point3="42.3238118998857,4" />
+                  <mssgle:LineSegment
+                    End="42.3238118998857,36.2352942892423" />
+                  <mssgle:CubicBezierSegment
+                    Point1="42.3238118998857,36.2352942892423"
+                    Point2="42.3238118998857,40.2352942892423"
+                    Point3="46.3238118998857,40.2352942892423" />
+                  <mssgle:LineSegment
+                    End="77.1476237997714,40.2352942892423" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Staging --&gt;Dim.PrecedenceConstraints[Constraint 5]"
+          TopLeft="416.355565697806,324.935952235863">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="-294.628576221271,29.145098582601"
+              Start="0,0"
+              End="-294.628576221271,21.645098582601">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,10.5725492913005" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10.5725492913005"
+                    Point2="0,14.5725492913005"
+                    Point3="-4,14.5725492913005" />
+                  <mssgle:LineSegment
+                    End="-290.628576221271,14.5725492913005" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-290.628576221271,14.5725492913005"
+                    Point2="-294.628576221271,14.5725492913005"
+                    Point3="-294.628576221271,18.5725492913005" />
+                  <mssgle:LineSegment
+                    End="-294.628576221271,21.645098582601" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="544.8,421.6"
+          Size="544.8,464.8"
+          Id="Package\Staging --&gt;Dim"
+          TopLeft="479.285722447901,98.137256278299" />
+        <AnnotationLayout
+          Text="LOAD DATA FROM STAGING --&gt; DIM 🐷"
+          ParentId="Package"
+          Size="324,43.2"
+          Id="968f2226-fdbd-4507-9071-1fba11e5b000"
+          TopLeft="135.119049920112,290.676473725213">
+          <AnnotationLayout.FontInfo>
+            <mssge:FontInfo
+              Family="Tahoma"
+              Size="16.200000762939453"
+              Color="#FF00FFFF">
+              <mssge:FontInfo.TextDecorations>
+                <av:TextDecorationCollection />
+              </mssge:FontInfo.TextDecorations>
+            </mssge:FontInfo>
+          </AnnotationLayout.FontInfo>
+        </AnnotationLayout>
+        <AnnotationLayout
+          Text="|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;"
+          ParentId="Package"
+          FontInfo="{x:Null}"
+          Size="32,566.4"
+          Id="6f1a01a5-f425-42a8-b51a-b04373140413"
+          TopLeft="1055.51429338991,59.9019616244162" />
+        <AnnotationLayout
+          Text="|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;"
+          ParentId="Package"
+          FontInfo="{x:Null}"
+          Size="32,566.4"
+          Id="e722e83a-f6c2-4e79-a615-c3f468352cdb"
+          TopLeft="105.337404893438,59.9523817771624" />
+        <AnnotationLayout
+          Text="------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
+          ParentId="Package"
+          FontInfo="{x:Null}"
+          Size="979.2,40"
+          Id="e6522b34-3a47-4247-a40d-1bb910b99bfa"
+          TopLeft="106.868017164401,581.792156237137" />
+        <AnnotationLayout
+          Text="------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
+          ParentId="Package"
+          FontInfo="{x:Null}"
+          Size="979.2,40"
+          Id="b587a15b-9a88-416e-8ab7-8d7068b440f2"
+          TopLeft="106.35781307408,47.2767425622672" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

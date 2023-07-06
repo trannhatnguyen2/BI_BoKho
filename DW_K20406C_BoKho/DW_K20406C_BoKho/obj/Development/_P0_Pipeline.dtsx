@@ -1,0 +1,270 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/28/2023 1:36:29 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-80UMU1UQ"
+  DTS:CreatorName="LAPTOP-80UMU1UQ\ADMIN"
+  DTS:DTSID="{71C84072-D742-484C-9C52-A8E72D096980}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5035.3"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package4"
+  DTS:PackageType="5"
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{8F54AB0A-7387-44FE-B687-B6A0F3B84543}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\LOAD DIMENSIONS (STAGING --&gt; DIM)"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{CCAAC797-2268-4E13-A75E-5AA70FE9AFD0}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="LOAD DIMENSIONS (STAGING --&gt; DIM)">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\LOAD DIMENSIONS (STAGING --&gt; DIM)\Execute Package Dim"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{D315A110-4619-4105-870C-4DD2F693F6A2}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Execute Package Dim"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>_P3_DW_Dim.dtsx</PackageName>
+              <PackagePassword
+                Sensitive="1"
+                Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA7dKrbfITx0qrIcMVQQlLuQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABu70HQb4vPv9wB8prCgtzku6mhQzdMxMGBJ7OpQ889fgAAAAAOgAAAAAIAACAAAACBB6Ubck2kGuYa0gK87eydNLyqXrpvNXRHaaf705UQUSAAAAB6/0bThv8tKjFEXwIpUjD4t9IPMlIWkoCeBE4eIuJnq0AAAAB1+tn296pbwnhFy+LX1xVDc+tNcVWI50ektnm49nZlQzopahuzjS4G5I5xvnh42O/u5/2LC4xxZwHRT+J4bZ9M</PackagePassword>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\LOAD FACT (STAGING --&gt; FACT)"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{3D75FAB4-CCBB-4A11-9B00-966AE76A89E2}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="LOAD FACT (STAGING --&gt; FACT)">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\LOAD FACT (STAGING --&gt; FACT)\Execute Package Fact"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{50D16899-54DA-49E8-9ECC-E060CF6D4991}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Execute Package Fact"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>_P3_DW_Fact.dtsx</PackageName>
+              <PackagePassword
+                Sensitive="1"
+                Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA7dKrbfITx0qrIcMVQQlLuQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAlpnYCD/loq3zTNXRltrSOpe81f67GXxAAR6X7ctNK3QAAAAAOgAAAAAIAACAAAAB+wDur/9xQhxG4NxfpV3gyyTLnCJLHreVCU+IU6onFlSAAAAB62az7O44NkOxylDByhXQr51URZ2bCX4ehIDBq5e2pykAAAADndu87Yiu4mgNZEyYAf+7BeRnhO3j3RPhFauqTRNj0wrANWcPIH8WmbVB1lHtcB2/5gkhLryWqggPXbqh4HVdf</PackagePassword>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\LOAD STAGING (OLTP --&gt; STAGING)"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{7398EAC4-E490-4D86-AA0E-CF2FDF93909A}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="LOAD STAGING (OLTP --&gt; STAGING)">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\LOAD STAGING (OLTP --&gt; STAGING)\Execute Package Staging"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{01780DF8-A2AB-4CED-9346-C67706030B42}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Execute Package Staging"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>_P2_Staging.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{BB3A6B79-4EB6-4001-B97C-ED79AB8200D9}"
+      DTS:From="Package\LOAD STAGING (OLTP --&gt; STAGING)"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\LOAD DIMENSIONS (STAGING --&gt; DIM)" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{68CD9972-9B7F-4FE7-8CCC-F3019DE330AF}"
+      DTS:From="Package\LOAD DIMENSIONS (STAGING --&gt; DIM)"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\LOAD FACT (STAGING --&gt; FACT)" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssge="clr-namespace:Microsoft.SqlServer.Graph.Extended;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+        <NodeLayout
+          Size="179.2,41.6"
+          Id="Package\LOAD DIMENSIONS (STAGING --&gt; DIM)\Execute Package Dim"
+          TopLeft="56.9269903280299,24.0052329431905" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="292,101.6"
+          Size="292,144.8"
+          Id="Package\LOAD DIMENSIONS (STAGING --&gt; DIM)"
+          TopLeft="603.571438850189,282.686278474373" />
+        <NodeLayout
+          Size="180.8,41.6"
+          Id="Package\LOAD FACT (STAGING --&gt; FACT)\Execute Package Fact"
+          TopLeft="63.0761967002131,24.6156906251676" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="294.4,95.2"
+          Size="294.4,138.4"
+          Id="Package\LOAD FACT (STAGING --&gt; FACT)"
+          TopLeft="606.507946836706,463.606541361309" />
+        <NodeLayout
+          Size="196,41.6"
+          Id="Package\LOAD STAGING (OLTP --&gt; STAGING)\Execute Package Staging"
+          TopLeft="49.4857203191644,24.7254920014049" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="295.2,100"
+          Size="295.2,143.2"
+          Id="Package\LOAD STAGING (OLTP --&gt; STAGING)"
+          TopLeft="603.809534092339,96.4379098492373" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="750.490486471264,239.637909849237">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,43.048368625135"
+              Start="0,0"
+              End="0,35.548368625135">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.548368625135" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="751.639692843447,427.486278474373">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,36.1202628869362"
+              Start="0,0"
+              End="0,28.6202628869362">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.6202628869362" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <AnnotationLayout
+          Text="🐉 PIPELINE 🐉"
+          ParentId="Package"
+          Size="195.2,45.6"
+          Id="7fe57321-f9c7-4a5a-bca1-eef487ed7d7e"
+          TopLeft="388.741503218868,331.914103540628">
+          <AnnotationLayout.FontInfo>
+            <mssge:FontInfo
+              Family="Tahoma"
+              Size="18"
+              Color="#FF00FF00">
+              <mssge:FontInfo.TextDecorations>
+                <av:TextDecorationCollection />
+              </mssge:FontInfo.TextDecorations>
+            </mssge:FontInfo>
+          </AnnotationLayout.FontInfo>
+        </AnnotationLayout>
+        <AnnotationLayout
+          Text="|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;"
+          ParentId="Package"
+          FontInfo="{x:Null}"
+          Size="32,582.4"
+          Id="2d92a3a0-0816-4f78-bd3d-bea2366c235e"
+          TopLeft="918.290831964931,69.1192819278589" />
+        <AnnotationLayout
+          Text="|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|&#xA;|"
+          ParentId="Package"
+          FontInfo="{x:Null}"
+          Size="32,566.4"
+          Id="d978d4f6-0408-4e4a-9f16-1feb464e6ff4"
+          TopLeft="348.447901708037,69.2616297780857" />
+        <AnnotationLayout
+          Text="-----------------------------------------------------------------------------------------------------------------------"
+          ParentId="Package"
+          FontInfo="{x:Null}"
+          Size="600,40"
+          Id="70283ac6-a546-4e5d-82a1-94e19f148b42"
+          TopLeft="349.035934963365,55.8748872571684" />
+        <AnnotationLayout
+          Text="------------------------------------------------------------------------------------------------------------------------"
+          ParentId="Package"
+          FontInfo="{x:Null}"
+          Size="604.8,40"
+          Id="41d4e64c-e46a-4ccb-b959-a322567aadfc"
+          TopLeft="348.818309720315,607.131834127631" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33214.272
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "DW_K20406C_BoKho", "DW_K20406C_BoKho\DW_K20406C_BoKho.dtproj", "{45EF688B-E9B0-453A-B4C7-23D8900B88AF}"
+EndProject
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "Cube_DW_K20406C_BoKho", "Cube_DW_K20406C_BoKho\Cube_DW_K20406C_BoKho.dwproj", "{F66FB7FB-AAAF-4ADB-B6DA-E2823C47AD6A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{45EF688B-E9B0-453A-B4C7-23D8900B88AF}.Development|Default.ActiveCfg = Development
+		{45EF688B-E9B0-453A-B4C7-23D8900B88AF}.Development|Default.Build.0 = Development
+		{F66FB7FB-AAAF-4ADB-B6DA-E2823C47AD6A}.Development|Default.ActiveCfg = Development
+		{F66FB7FB-AAAF-4ADB-B6DA-E2823C47AD6A}.Development|Default.Build.0 = Development
+		{F66FB7FB-AAAF-4ADB-B6DA-E2823C47AD6A}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C38626B8-2FD1-40A2-8B15-48C8A798E168}
+	EndGlobalSection
+EndGlobal
