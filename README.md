@@ -31,7 +31,7 @@
 AdventureWorks Database is a sample online transaction processing (OLTP) database provided by Microsoft. The AdventureWorks Database supports a multinational manufacturing company called Adventure Works Cycles. This project will utilize the AdventureWorks Database version 2019 and concentrates on module Sales only.
 
 <p align="center">
-<img scr="./img/datasource.png" width=50% height=50%>
+<img scr="https://github.com/trannhatnguyen2/BI_BoKho/blob/main/img/datasource.png" width=50% height=50%>
 
 <p align="center">
     Data Source: Sales Module
@@ -40,7 +40,7 @@ AdventureWorks Database is a sample online transaction processing (OLTP) databas
 # 🚀 Solution
 
 <p align="center">
-<img scr="./img/BI_Process.png" width=80% height=80%>
+<img scr="https://github.com/trannhatnguyen2/BI_BoKho/blob/main/img/BI_Process.png" width=80% height=80%>
 
 <p align="center">
     BI Solution
@@ -63,7 +63,7 @@ Bus Matrix, Master Data, Transaction Data, ETL Mapping, etc. are deployed to sup
 The diagram below illustrates the fundamental conceptual diagram of the proposed data warehouse in Star format.
 
 <p align="center">
-<img scr="./img/DataWarehouse_StarSchema.png" width=80% height=80%>
+<img scr="https://github.com/trannhatnguyen2/BI_BoKho/blob/main/img/DataWarehouse_StarSchema.png" width=80% height=80%>
 
 <p align="center">
     Data Warehouse Star Schema
@@ -74,7 +74,7 @@ The diagram below illustrates the fundamental conceptual diagram of the proposed
 ### **ETL Master Pipeline**
 
 <p align="center">
-<img scr="./img/ETL_MasterPipeline.png" width=80% height=80%>
+<img scr="https://github.com/trannhatnguyen2/BI_BoKho/blob/main/img/ETL_MasterPipeline.png" width=80% height=80%>
 
 <p align="center">
     ETL Master Pipeline
@@ -89,7 +89,7 @@ Based on the pipeline shown above, it is divided into 3 phases:
 ### **Phase 1: Staging Area's ETL Process**
 
 <p align="center">
-<img scr="./img/Source_To_Staging.png" width=80% height=80%>
+<img scr="https://github.com/trannhatnguyen2/BI_BoKho/blob/main/img/Source_To_Staging.png" width=80% height=80%>
 
 <p align="center">
     Load data from Source --> Staging Area
@@ -98,7 +98,7 @@ Based on the pipeline shown above, it is divided into 3 phases:
 ### **Phase 2: Dimension Table's ETL Process**
 
 <p align="center">
-<img scr="./img/Staging_To_DimTable.png" width=80% height=80%>
+<img scr="https://github.com/trannhatnguyen2/BI_BoKho/blob/main/img/Staging_To_DimTable.png" width=80% height=80%>
 
 <p align="center">
     Load data from Staging --> Dimension Tables
@@ -107,7 +107,7 @@ Based on the pipeline shown above, it is divided into 3 phases:
 ### **Phase 3: Fact Table's ETL Process**
 
 <p align="center">
-<img scr="./img/Staging_To_FactTable.png" width=80% height=80%>
+<img scr="https://github.com/trannhatnguyen2/BI_BoKho/blob/main/img/Staging_To_FactTable.png" width=80% height=80%>
 
 <p align="center">
     Load data from Staging -- Fact Table
@@ -116,7 +116,7 @@ Based on the pipeline shown above, it is divided into 3 phases:
 ### **Truncate Tables in Staging Area**
 
 <p align="center">
-<img scr="./img/Truncate_Staging.png" width=80% height=80%>
+<img scr="https://github.com/trannhatnguyen2/BI_BoKho/blob/main/img/Truncate_Staging.png" width=80% height=80%>
 
 <p align="center">
     Truncate Tables in Staging Area
@@ -124,17 +124,10 @@ Based on the pipeline shown above, it is divided into 3 phases:
 
 ### **Job Scheduler**
 
-<img scr="./img/JobScheduler" width=80% height=80%>
+<img scr="https://github.com/trannhatnguyen2/BI_BoKho/blob/main/img/JobScheduler.png" width=80% height=80%>
 
 <p align="center">
     Schedule jobs configure the step truncate
-</p>
-
-<p align="center">
-<img scr="./img/Truncate_Staging.png" width=80% height=80%>
-
-<p align="center">
-    Truncate Tables in Staging Area
 </p>
 
 ## 📂 All file we were submitted
