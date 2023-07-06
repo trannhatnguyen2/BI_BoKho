@@ -1,4 +1,4 @@
-# [APPLYING BUSINESS INTELLIGENCE TECHNOLOGY AND AUTOMATION PROCESSES TO MAKE MORE ACCURATE DECISIONS FOR SALES OPERATIONS](https://github.com/trannhatnguyen2/K20406C_BoKho)
+# [Applying Business Intelligence Technology And Automation Processes To Make More Accurate Decisions For Sales Operations](https://github.com/trannhatnguyen2/K20406C_BoKho)
 
 ## Member of group
 
