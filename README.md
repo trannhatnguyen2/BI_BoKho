@@ -1,4 +1,4 @@
-# [Applying Business Intelligence Technology And Automation Processes To Make More Accurate Decisions For Sales Operations](https://github.com/trannhatnguyen2/K20406C_BoKho)
+# [Applying Business Intelligence Technology And Automation Processes To Make More Accurate Decisions For Sales Operations](https://github.com/trannhatnguyen2/BI_BoKho)
 
 ## Member of group
 
@@ -26,6 +26,8 @@
  <br />
 
 # 🛠️ Requirements
+
+The process of decision-making involves utilizing data and analytical tools to make informed decisions that align with business goals and objectives. This allows organizations to make decisions based on data-driven insights, leading to improved operational efficiency, increased profitability, and a competitive edge in the market. The aim of this project is to develop Business Intelligence for Sales modules that can provide managers with a deeper understanding of the department's features that enhance decision-making.
 
 # 🧙‍♂️ Data Source
 
@@ -86,7 +88,7 @@ Based on the pipeline shown above, it is divided into 3 phases:
 
 - Phase 1: Load data from Source --> Staging Area
 - Phase 2: Load data from Staging --> Dimension Tables
-- Phase 3: Load data from Staging -- Fact Table
+- Phase 3: Load data from Staging --> Fact Table
 
 ### **Phase 1: Staging Area's ETL Process**
 
@@ -112,7 +114,7 @@ Based on the pipeline shown above, it is divided into 3 phases:
 <img src="https://github.com/trannhatnguyen2/BI_BoKho/blob/main/img/Staging_To_FactTable.png" width=60% height=60%>
 
 <p align="center">
-    Load data from Staging -- Fact Table
+    Load data from Staging --> Fact Table
 </p>
 
 ### **Truncate Tables in Staging Area**
@@ -193,15 +195,15 @@ Based on the pipeline shown above, it is divided into 3 phases:
 
 # 📂 Files
 
-### > **1. Report (both Word and pdf file) -** [Link](https://github.com/trannhatnguyen2/K20406C_BoKho/blob/main/K20406C_BoKho.pdf)
+### > **1. Report (both Word and pdf file) -** [Link](https://github.com/trannhatnguyen2/BI_BoKho/blob/main/files/K20406C_BoKho.pdf)
 
-### > **2. Slide -** [Link](https://github.com/trannhatnguyen2/K20406C_BoKho/blob/main/Slide_K20406C_BoKho.pdf)
+### > **2. Slide -** [Link](https://github.com/trannhatnguyen2/BI_BoKho/blob/main/files/Slide_K20406C_BoKho.pdf)
 
-### > **3. SSIS and SSAS package -** [Link](https://github.com/trannhatnguyen2/K20406C_BoKho/tree/main/DW_K20406C_BoKho)
+### > **3. SSIS and SSAS package -** [Link](https://github.com/trannhatnguyen2/BI_BoKho/tree/main/scr/DW_K20406C_BoKho)
 
-### > **4. SQL file query -** [Link](https://github.com/trannhatnguyen2/K20406C_BoKho/tree/main/SQL_Query)
+### > **4. SQL file query -** [Link](https://github.com/trannhatnguyen2/BI_BoKho/tree/main/scr/SQL_Query)
 
-### > **5. Power BI file (include 4 Dashboard) -** [Link](https://github.com/trannhatnguyen2/K20406C_BoKho/blob/main/Dashboard_BoKho.pbix)
+### > **5. Power BI file (include 4 Dashboard) -** [Link](https://github.com/trannhatnguyen2/BI_BoKho/blob/main/files/Dashboard_BoKho.pbix)
 
 ---
 
